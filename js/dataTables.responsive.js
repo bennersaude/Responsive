@@ -218,9 +218,7 @@ Responsive.prototype = {
 		// may not be requires which makes this sub-optimal, but it would
 		// require another full redraw to make complete use of those extra few
 		// pixels
-		var scrolling = dt.settings()[0].oScroll;
-		var bar = scrolling.sY || scrolling.sX ? scrolling.iBarWidth : 0;
-		var widthAvailable = dt.table().container().offsetWidth - bar;
+		var widthAvailable = dt.table().container().offsetWidth - this._scrollBarSize();
 		var usedWidth = widthAvailable - requiredWidth;
 
 		// Control column needs to always be included. This makes it sub-
@@ -672,7 +670,24 @@ Responsive.prototype = {
 		} );
 
 		inserted.remove();
+	},
+	
+    /**
+	 * Returns the size of the table scroll bar considering if it's visible or not.
+	 *
+	 * @private
+	 */
+	_scrollBarSize: function() {
+	    var dt = this.s.dt;
+	    var scrolling = dt.settings()[0].oScroll;
+	    var tableScrolls = $(dt.table().container()).find('.dataTables_scrollBody');
+	    var scrollIsVisible = true;
+	    if (tableScrolls.length === 1) {
+	        scrollIsVisible = tableScrolls[0].scrollHeight > tableScrolls[0].clientHeight;
+	    }
+	    return (scrolling.sY || scrolling.sX) && scrollIsVisible ? scrolling.iBarWidth : 0;
 	}
+
 };
 
 
