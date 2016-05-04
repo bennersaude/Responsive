@@ -1,11 +1,11 @@
-/*! Responsive 1.0.6
+/*! Responsive 1.0.61
  * 2014-2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     Responsive
  * @description Responsive tables plug-in for DataTables
- * @version     1.0.6
+ * @version     1.0.61
  * @file        dataTables.responsive.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
@@ -587,6 +587,9 @@ Responsive.prototype = {
 		}
 
 		$( dt.table().node() ).toggleClass('collapsed', collapsedClass );
+
+        // Custom code to notify when a column has been hidden
+		$(dt.table().node()).trigger('responsive-resize.dt', [dt, collapsedClass]);
 
 		dt.columns().eq(0).each( function ( colIdx, i ) {
 			dt.column( colIdx ).visible( columnsVis[i] );
