@@ -1,30 +1,30 @@
-﻿table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child,
-table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child {
+﻿table.dataTable.dtr-inline.collapsed > tbody > tr > .responsive-expand:first-child,
+table.dataTable.dtr-inline.collapsed > tbody > tr > .responsive-expand:first-child {
   position: relative;
   cursor: pointer; }
-  table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
-  table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+  table.dataTable.dtr-inline.collapsed > tbody > tr > .responsive-expand:first-child:before,
+  table.dataTable.dtr-inline.collapsed > tbody > tr > .responsive-expand:first-child:before {
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
     content: "\f13a";
     color: #2F353B; }
-  table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child.dataTables_empty:before,
-  table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child.dataTables_empty:before {
+  table.dataTable.dtr-inline.collapsed > tbody > tr > .responsive-expand:first-child.dataTables_empty:before,
+  table.dataTable.dtr-inline.collapsed > tbody > tr > .responsive-expand:first-child.dataTables_empty:before {
     display: none; }
 
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > .responsive-expand:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > .responsive-expand:first-child:before {
   content: "\f139";
   color: #BFCAD1; }
 
 table.dataTable.dtr-inline.collapsed > tbody > tr.child td:before {
   display: none; }
 
-table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child,
-table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child {
+table.dataTable.dtr-inline.collapsed.compact > tbody > tr > .responsive-expand:first-child,
+table.dataTable.dtr-inline.collapsed.compact > tbody > tr > .responsive-expand:first-child {
   padding-left: 27px; }
-  table.dataTable.dtr-inline.collapsed.compact > tbody > tr > td:first-child:before,
-  table.dataTable.dtr-inline.collapsed.compact > tbody > tr > th:first-child:before {
+  table.dataTable.dtr-inline.collapsed.compact > tbody > tr > .responsive-expand:first-child:before,
+  table.dataTable.dtr-inline.collapsed.compact > tbody > tr > .responsive-expand:first-child:before {
     top: 5px;
     left: 4px;
     height: 14px;
@@ -44,7 +44,7 @@ table.dataTable.dtr-column > tbody > tr > th.control {
     margin-top: -10px;
     margin-left: -10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
     content: "\f13a";
     color: #2F353B; }
 

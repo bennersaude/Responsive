@@ -3,7 +3,7 @@
 //
 @mixin control() {
 	text-align: center;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 @mixin control-open() {
@@ -22,8 +22,8 @@
 table.dataTable {
 	// Styling for the `inline` type
 	&.dtr-inline.collapsed > tbody {
-		> tr > td:first-child,
-		> tr > th:first-child {
+		> tr > .responsive-expand:first-child,
+		> tr > .responsive-expand:first-child {
 			position: relative;
 			cursor: pointer;
 
@@ -38,8 +38,8 @@ table.dataTable {
 		}
 
 		> tr.parent {
-			> td:first-child:before,
-			> th:first-child:before {
+			> .responsive-expand:first-child:before,
+			> .responsive-expand:first-child:before {
 				@include control-close;
 			}
 		}
@@ -51,8 +51,8 @@ table.dataTable {
 
 	// DataTables' `compact` styling
 	&.dtr-inline.collapsed.compact > tbody {
-		> tr > td:first-child,
-		> tr > th:first-child {
+		> tr > .responsive-expand:first-child,
+		> tr > .responsive-expand:first-child {
 			padding-left: 27px;
 
 			&:before {

@@ -1,11 +1,11 @@
-/*! Responsive 1.0.63
+/*! Responsive 1.0.64
  * 2014-2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     Responsive
  * @description Responsive tables plug-in for DataTables
- * @version     1.0.63
+ * @version     1.0.64
  * @file        dataTables.responsive.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
@@ -587,19 +587,6 @@ Responsive.prototype = {
 		}
 
 		$( dt.table().node() ).toggleClass('collapsed', collapsedClass );
-
-        // Custom code to control when the first column will be displayed
-		var expandTds = $(".responsive-expand");
-
-		for (var td in expandTds.toArray()) {
-		    if (expandTds.hasOwnProperty(td)) {
-		        if (collapsedClass) {
-		            $(expandTds[td]).removeClass("hide");
-		        } else {
-		            $(expandTds[td]).addClass("hide");
-		        }
-		    }
-		}
 
 		dt.columns().eq(0).each( function ( colIdx, i ) {
 			dt.column( colIdx ).visible( columnsVis[i] );
